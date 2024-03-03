@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+  /* CSS Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Frame 27 */
+  .container {
+    position: relative;
+    width: 1983px;
+    height: 1415px;
+    background: #FFFFFF;
+  }
+
+  /* Logo */
+  .logo {
+    position: absolute;
+    width: 200px; /* Adjust width as needed */
+    top: 30px; /* Adjust top position */
+    left: 30px; /* Adjust left position */
+  }
+
+  /* About Us, Service, Contact */
+  .about,
+  .service,
+  .contact {
+    position: absolute;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #36AA8E;
+    cursor: pointer;
+    text-decoration: none; /* Added to remove underline */
+  }
+
+  .about:hover,
+  .service:hover,
+  .contact:hover {
+    color: #2A7E6E; /* Change text color on hover */
+  }
+
+  .about:hover::after,
+  .service:hover::after,
+  .contact:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #DEF3EC; /* Add box color */
+    z-index: -1; /* Ensure the box is behind the text */
+    border-radius: 5px; /* Rounded corners */
+  }
+
+  .about {
+    width: 139px;
+    height: 36px;
+    left: 695px;
+    top: 109px;
+  }
+
+  .service {
+    width: 112px;
+    height: 36px;
+    left: 913px;
+    top: 109px;
+  }
+
+  .contact {
+    width: 118px;
+    height: 36px;
+    left: 1106px;
+    top: 109px;
+  }
+
+  /* Sign in */
+  .signin-container {
+    position: absolute;
+    width: 219px;
+    height: 63px;
+    left: 1547px;
+    top: 96px;
+  }
+
+  .signin {
+    position: absolute;
+    width: 219px;
+    height: 63px;
+    background: #38AE8E;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    cursor: pointer; /* Add cursor pointer */
+  }
+
+  .signin:hover {
+    background-color: #DEF3EC; /* Change background color on hover */
+  }
+
+  /* Our Services */
+  .ourservices {
+    position: absolute;
+    width: auto; /* Adjusted width */
+    height: 61px;
+    left: 83px;
+    top: 310px;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 61px;
+    color: #38AE8E;
+  }
+
+  /* Help Content */
+  .help-content {
+    position: absolute;
+    width: 948px;
+    height: auto; /* Adjusted height */
+    left: 92px;
+    top: 469px;
+    font-weight: 800;
+    font-size: 30px;
+    color: #000000;
+  }
+
+  /* Rectangle 147 */
+  .rectangle {
+    position: absolute;
+    width: 473px;
+    height: 1200px;
+    left: 1420px;
+    top: 186px;
+    background: url(Images/ad1.png); /* Replace 'https://example.com/ad1.png' with the actual URL of the image */
+    border-radius: 20px;
+  }
+</style>
+</head>
+<body>
+  <!-- HTML Structure -->
+  <div class="container">
+    <img src="Images/logo.png" alt="Logo" class="logo"> <!-- Added logo image -->
+    <a href="about us.html" class="about">About Us</a> <!-- Added anchor tag -->
+    <a href="service.html" class="service">Service</a> <!-- Added anchor tag -->
+    <a href="contact us.html" class="contact">Contact</a> <!-- Added anchor tag -->
+    <div class="signin-container">
+      <a href="sign in.html" class="signin">Sign in</a> <!-- Changed to anchor tag -->
+    </div>
+    <div class="ourservices">Our Services</div>
+    <div class="help-content">
+      HelpLink offers a range of services aimed at facilitating connections between volunteers and charitable organizations, as well as providing convenient avenues for sending donations. Here's how we can help you make a difference:<br/>Volunteer Matching<br/>Our platform provides a comprehensive database of volunteer opportunities from various charitable organizations worldwide. Whether you're looking to volunteer locally or internationally, HelpLink makes it easy to find opportunities that align with your interests, skills, and schedule. Explore a wide range of causes, including environmental conservation, humanitarian aid, education, healthcare, and more.<br/>Donation Platform<br/>HelpLink offers a secure and user-friendly platform for sending donations to charitable organizations. Whether you're looking to make a one-time donation or set up recurring contributions, our platform ensures that your support reaches those who need it most. Browse through a diverse range of causes and organizations, and make a meaningful impact with just a few clicks.
+    </div>
+    <div class="rectangle"></div>
+  </div>
+</body>
+</html>

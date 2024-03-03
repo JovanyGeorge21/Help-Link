@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Website Title</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: 67%; /* Set container width to 67% */
+    position: relative;
+    background: white;
+    height: 1080px; /* Adjust as needed */
+    margin: auto; /* Center the container horizontally */
+  }
+
+  /* Navigation container */
+  .nav-container {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px;
+    text-decoration: none; /* Remove default underline */
+  }
+
+  /* Navigation link styles */
+  .nav-link {
+    color: #36AA8E;
+    font-size: 30px;
+    font-family: Inter;
+    font-weight: 700;
+    text-decoration: none; /* Remove default underline */
+  }
+
+  /* Hover effect */
+  .nav-container:hover {
+    background-color: #DEF3EC; /* Change background color on hover */
+  }
+
+  /* Button styling */
+  .button {
+    width: 219px;
+    height: 63px;
+    background: #38AE8E;
+    border-radius: 15px;
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    font-family: Inter;
+    font-weight: 500;
+    text-align: center;
+    line-height: 63px; /* Center text vertically */
+  }
+
+  /* Sign in and Get Started button positions */
+  .sign-in-button {
+    left: 1547px;
+    top: 76px;
+  }
+
+  .get-started-button {
+    left: 83px;
+    top: 735px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Your website content goes here -->
+  <!-- Logo -->
+  <img src="D:\Games\New folder\Images\Logo.png" style="width: 200px; height: 150px; position: absolute; left: 83px; top: 72px;" alt="Logo">
+  
+  <!-- Navigation links -->
+  <a href="about us.html" class="nav-container" style="left: 695px; top: 89px; position: absolute;">
+    <div class="nav-link">About Us</div>
+  </a>
+  <a href="Service.html" class="nav-container" style="left: 913px; top: 89px; position: absolute;">
+    <div class="nav-link">Service</div>
+  </a>
+  <a href="Contact Us.html" class="nav-container" style="left: 1106px; top: 89px; position: absolute;">
+    <div class="nav-link">Contact</div>
+  </a>
+  
+  <!-- Sign in button -->
+  <a href="Sign in.html" class="button sign-in-button">
+    Sign in
+  </a>
+
+  <!-- Get Started button -->
+  <a href="#" class="button get-started-button">
+    Get Started
+  </a>
+  
+  <!-- Title -->
+  <div style="left: 83px; top: 323px; position: absolute; color: #38AE8E; font-size: 50px; font-family: Inter; font-weight: 800; word-wrap: break-word;">IT’S THE TIME TO BE <br/>A VOLUNTEER </div>
+  
+  <!-- Description -->
+  <div style="width: 775px; left: 83px; top: 523px; position: absolute; color: black; font-size: 30px; font-family: Inter; font-weight: 800; word-wrap: break-word;">We help the people to find the charities which need volunteers to help them in many fields, like in technology field, Food and etc.<br/>Also you can send Money, cloth, Electronics and etc.</div>
+  
+  <!-- Circles -->
+  <div id="image-container" style="position: absolute; left: 1151px; top: 293px;">
+    <div style="width: 630px; height: 630px; position: absolute; background: #DEF3EC; border-radius: 50%;"></div>
+    <div style="width: 560px; height: 560px; position: absolute; background: #BFE9E1; border-radius: 50%; left: 35px; top: 35px;"></div>
+    <img id="image" style="width: 520px; height: 520px; position: absolute; border-radius: 50%; left: 55px; top: 55px;" src="Images/Front1.png" />
+    <div style="width: 70px; height: 70px; position: absolute; background: rgba(56, 174, 142, 0.30); border-radius: 50%; left: 20px; top: 449px;"></div>
+    <div style="width: 54px; height: 54px; position: absolute; background: rgba(56, 174, 142, 0.30); border-radius: 50%; left: 506px; top: 37px;"></div>
+  </div>
+</div>
+
+<script>
+  const images = ['Front1.png', 'Front2.png', 'Front3.png'];
+  let currentIndex = 0;
+
+  function changeImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById('image').src = 'Images/' + images[currentIndex];
+  }
+
+  setInterval(changeImage, 3000); // Change image every 3 seconds
+</script>
+</body>
+</html>
