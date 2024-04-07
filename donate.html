@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Form</title>
+    <style>
+        body {
+            background-color: white; /* Set background color to white */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .input-box {
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background: #51d4d6;
+            padding: 5px;
+        }
+
+        .card-number {
+            width: 330px;
+            height: 37px;
+            top: 194px;
+            left: 29px;
+        }
+
+        .card-holder {
+            width: 311px;
+            height: 43px;
+            top: 264px;
+            left: 29px; /* Adjusted position */
+        }
+
+        .slash {
+            width: 80px;
+            height: 37px;
+            top: 194px;
+            left: calc(29px + 330px + 10px); /* Adjusted position */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: text;
+            z-index: 2;
+            background: #51d4d6;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .slash input {
+            background: none;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .debit-text {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px; /* Increased font size */
+            font-weight: bold;
+            color: white;
+        }
+
+        .debit-card {
+            background-color: #007bff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #007bff 0%, #4CAF50 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex; /* Add display: flex */
+            align-items: center; /* Center items vertically */
+            z-index: 1; /* Ensure it's below the input box */
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+        }
+
+        .card-logos {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+        }
+
+        .card-logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .date-input {
+            position: absolute;
+            width: 150px;
+            height: 37px;
+            top: 194px; /* Adjust as needed */
+            left: calc(29px + 330px + 10px + 80px + 10px); /* Adjusted position */
+            background: #51d4d6;
+            border-radius: 5px;
+            padding: 5px;
+            z-index: 2;
+        }
+
+        .date-input input {
+            background: none;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 1920px; height: 1080px; position: relative;">
+        <img style="width: 362px; height: 685px; left: 1497px; top: 197px; position: absolute; border-radius: 20px; z-index: 1;" src="Images/ad1.png" />
+        <img src="Images/Logo.png" alt="Logo" style="left: 83px; top: 92px; position: absolute; width: 200px; height: auto; z-index: 2;">
+        <a href="Home.html" style="text-decoration: none; color: #36AA8E;">
+            <div style="left: 773px; top: 101px; position: absolute; text-align: center; color: #36AA8E; font-size: 30px; font-family: Inter; font-weight: 700; word-wrap: break-word; z-index: 2;">Charity Association</div>
+        </a>
+        <a href="Event.html" style="text-decoration: none; color: rgba(54, 170, 142, 0.70);">
+            <div style="left: 1128px; top: 101px; position: absolute; color: rgba(54, 170, 142, 0.70); font-size: 30px; font-family: Inter; font-weight: 700; word-wrap: break-word; z-index: 2;">Events</div>
+        </a>
+        <a href="Home.html" style="text-decoration: none; color: rgba(54, 170, 142, 0.70);">
+            <div style="left: 621px; top: 101px; position: absolute; color: rgba(54, 170, 142, 0.70); font-size: 30px; font-family: Inter; font-weight: 700; word-wrap: break-word; z-index: 2;">Home</div>
+        </a>
+        <div style="width: 290.01px; height: 0px; left: 772.99px; top: 161px; position: absolute; border: 3px #36AA8E solid; z-index: 2;"></div>
+        <div class="debit-card" style="width: 528.66px; height: 336px; left: 654px; top: 295px; position: absolute; z-index: 1;">
+            <div class="card-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1200px-Mastercard-logo.svg.png" alt="Mastercard" class="card-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa" class="card-logo">
+            </div>
+            <div class="card-overlay"></div>
+            <div class="debit-text">Debit</div>
+            <div class="input-box card-number" contenteditable="true" id="cardNumber" onclick="clearText('cardNumber', 'cardNumberPlaceholder')">Card Number</div>
+            <div class="input-box card-holder" contenteditable="true" id="cardHolder" onclick="clearText('cardHolder', 'cardHolderPlaceholder')">CardHolder Name</div>
+          
+            <div class="date-input">
+                <input type="text" placeholder="MM/YY" onclick="handleSlashInput(event)">
+            </div>
+        </div>
+        <div style="width: 247px; height: 38px; left: 784px; top: 678px; position: absolute; background: #CCEEE6; border-radius: 10px; overflow: hidden; z-index: 2;">
+            <input type="text" placeholder="Write here the amount of Donation" style="position: relative; left: 10px; top: 13px; color: #575E6D; font-size: 14px; font-family: Poppins; font-weight: 500; letter-spacing: 0.21px; word-wrap: break-word; width: 100%; height: 100%; border: none; outline: none; background: none;">
+        </div>
+        <div style="position: absolute; width: 211px; height: 46px; left: 795px; top: 763px; background: #38AE8E; border-radius: 10px; z-index: 2;">
+            <a href="submit1.html" style="text-decoration: none; color: white; width: 100%; height: 100%; display: block;">
+                <button style="position: absolute; width: 100%; height: 100%; font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 12px; line-height: 18px; letter-spacing: 0.03em; color: #FFFFFF; background: none; border: none; outline: none; cursor: pointer;">Submit</button>
+            </a>
+        </div>
+        <img style="width: 70px; height: 70px; left: 1721px; top: 84px; position: absolute; border-radius: 9999px; z-index: 2;" src="Images/Profile1.png" />
+    </div>
+</body>
+</html>

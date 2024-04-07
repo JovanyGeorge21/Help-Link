@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100%; 
+    position: relative;
+    background: white;
+    height: auto; /* Auto height to fit content */
+    margin: auto; /* Center the container horizontally */
+    max-width: 1200px; /* Limit maximum width for larger screens */
+    padding: 20px; /* Add padding for better spacing */
+  }
+  
+  /* Media queries for responsiveness */
+  @media only screen and (max-width: 768px) {
+    /* Adjust container width and padding for smaller screens */
+    .container {
+      padding: 10px; /* Decrease padding for smaller screens */
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    /* Adjust container width and padding for even smaller screens */
+    .container {
+      max-width: 90%; /* Adjust maximum width for very small screens */
+      padding: 5px; /* Further decrease padding for very small screens */
+    }
+  }
+  
+  
+  /* Navigation container */
+  .nav-container {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 5px;
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  /* Navigation link styles */
+  .nav-link {
+    color: #36AA8E;
+    font-size: 1.1em; /* Increase font size */
+    font-family: Inter;
+    font-weight: bold; /* Make font bold */
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  
+  /* Hover effect */
+  .nav-container:hover {
+    background-color: #DEF3EC; /* Change background color on hover */
+  }
+  
+  /* Button styling */
+  .button {
+    width: 8.5em; /* Increase width */
+    height: 2.5em; /* Increase height */
+    background: #38AE8E;
+    border-radius: 15px;
+    position: absolute;
+    color: white;
+    font-size: 1.2em; /* Increase font size */
+    font-family: Inter;
+    font-weight: bold; /* Make font bold */
+    text-align: center;
+    line-height: 2.5em; /* Adjust line height */
+    text-decoration: none; /* Remove underline */
+  }
+  
+    
+  
+  /* Sign in and Get Started button positions */
+  .sign-in-button {
+    left: 80%; /* Adjust position based on screen width */
+    top: 90%; /* Adjust position based on screen height */
+  }
+  
+  .get-started-button {
+    left: 2%; /* Adjust position based on screen width */
+    top: 1150%; /* Adjust position based on screen height */
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 90%; /* Adjust container width for smaller screens */
+    }
+  
+    .button {
+      width: 100%; /* Make button full width for smaller screens */
+      position: left; /* Change button positioning for smaller screens */
+      top: 0;
+      left: 0;
+      margin-top: 10px; /* Add some spacing between buttons */
+    }
+  
+    .nav-container {
+      display: block; /* Change navigation container to block for smaller screens */
+      margin-bottom: 10px; /* Add some spacing between navigation links */
+    }
+  }

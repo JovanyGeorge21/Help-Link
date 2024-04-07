@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Ad</title>
+    <style>
+        .container {
+            width: 100%;
+            position: relative;
+        }
+
+        .ad-container {
+            position: fixed;
+            top: 20%; /* Adjust initial vertical position */
+            right: 5%; /* Adjust initial horizontal position */
+            z-index: 999; /* Make sure the ad is on top */
+            transition: top 0.5s ease, right 0.5s ease; /* Smooth transition effect */
+        }
+
+        .ad {
+            width: 300px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: Add border radius */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ad-container">
+            <img src="Images/ad1.png" alt="Ad" class="ad">
+        </div>
+        <div style="left: 20px; top: 20px; position: absolute; color: black; font-size: 40px; font-family: Inter; font-weight: 900; word-wrap: break-word">
+            <img src="Images/Logo.png" alt="Logo" style="width: auto; height: 200px;" />
+        </div>
+        <div style="left: 773px; top: 101px; position: absolute; text-align: center; color: #73C4B0; font-size: 30px; font-family: Inter; font-weight: 700; word-wrap: break-word">
+            <a href="charity.html" style="text-decoration: none; color: #73C4B0;">Charity Association</a>
+        </div>
+        <div style="left: 1128px; top: 101px; position: absolute; color: rgba(54, 170, 142, 0.70); font-size: 30px; font-family: Inter; font-weight: 700; word-wrap: break-word">
+            <a href="event.html" style="text-decoration: none; color: rgba(54, 170, 142, 0.70);">Events</a>
+        </div>
+        <div style="left: 621px; top: 101px; position: absolute; color: #36AA8E; font-size: 30px; font-family: Inter; font-weight: 700; word-wrap: break-word">Home</div>
+        <div style="width: 87px; height: 0px; left: 621px; top: 161px; position: absolute; border: 3px #36AA8E solid"></div>
+        <img style="width: 70px; height: 70px; left: 1721px; top: 84px; position: absolute; border-radius: 9999px" src="Images/Profile1.png" />
+        <div style="width: 1334px; left: 83px; top: 270px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 103px; display: inline-flex">
+            <div style="width: 531px; color: #38AE8E; font-size: 50px; font-family: Inter; font-weight: 800; word-wrap: break-word">IT’S THE TIME TO BE <br/>A VOLUNTEER </div>
+            <div style="justify-content: flex-start; align-items: center; display: inline-flex">
+                <div style="width: 687px; color: black; font-size: 30px; font-family: Inter; font-weight: 800; word-wrap: break-word">We help the people to find the charities which need volunteers to help them in many fields, like in technology field, Food and etc.<br/>Also you can send Money, cloth, Electronics and etc.</div>
+                <img style="width: 647px; height: 430px" src="Images/Home1.png" />
+            </div>
+            <div style="width: 1328px; height: 512px; position: relative">
+                <div style="width: 687px; left: 641px; top: 166px; position: absolute; color: black; font-size: 30px; font-family: Inter; font-weight: 800; word-wrap: break-word">We help the people to find the charities which need volunteers to help them in many fields, like in technology field, Food and etc.<br/>Also you can send Money, cloth, Electronics and etc.</div>
+                <img style="width: 512px; height: 512px; left: 0px; top: 0px; position: absolute" src="Images/Home2.png" />
+            </div>
+            <div style="width: 1328px; height: 386px; position: relative">
+                <div style="width: 687px; left: 0px; top: 103px; position: absolute; color: black; font-size: 30px; font-family: Inter; font-weight: 800; word-wrap: break-word">We help the people to find the charities which need volunteers to help them in many fields, like in technology field, Food and etc.<br/>Also you can send Money, cloth, Electronics and etc.</div>
+                
+                <img style="width: 580px; height: 386px; left: 748px; top: 0px; position: absolute" src="Images/Home3.png" />
+            </div>
+              <!-- Background shapes -->
+    <div style="width: 1515.06px; height: 864.04px; left: -166.48px; top: 541.79px; position: absolute">
+        <div style="width: 269.44px; height: 248.85px; left: 1287px; top: 383.21px; position: absolute; transform: rotate(32.18deg); transform-origin: 0 0; background: rgba(56.21, 144.97, 146.62, 0.40)"></div>
+        <div style="width: 269.44px; height: 248.85px; left: 651px; top: 349.21px; position: absolute; transform: rotate(32.18deg); transform-origin: 0 0; background: rgba(56.21, 144.97, 146.62, 0.40)"></div>
+        <div style="width: 269.44px; height: 248.85px; left: 0.48px; top: 136.50px; position: absolute; transform: rotate(-27.23deg); transform-origin: 0 0; background: rgba(56.21, 144.97, 146.62, 0.40)"></div>
+        <div style="width: 650.82px; height: 578.57px; left: 476.86px; top: 0px; position: absolute; transform: rotate(55.51deg); transform-origin: 0 0; background: rgba(56.21, 144.97, 146.62, 0.40)"></div>
+            
+        </div>
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            const adContainer = document.querySelector('.ad-container');
+            const scrollTop = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const adHeight = adContainer.clientHeight;
+            const topRightImageHeight = document.querySelector('.top-right-image').clientHeight; // Add this line
+            const maxTop = windowHeight - adHeight - 20 - topRightImageHeight; // Adjust the buffer (20px) to your preference
+            adContainer.style.top = Math.min(20 + scrollTop * 0.1, maxTop) + 'px'; // Adjust scroll speed (0.1)
+        });
+    </script>
+</body>
+</html>
